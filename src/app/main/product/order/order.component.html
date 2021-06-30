@@ -126,12 +126,21 @@
               </table>
           </div>
           <div class="modal-footer">
+            <div class="dropdown">
+              <button class="nut_dropdown">Xử lý</button>
+              <div class="noidung_dropdown">
+                <a href="">Đang giao</a>
+                <a href="">Chờ xử lý</a>
+                <a href="">Đã giao</a>
+              </div>
+            </div>
+            <button type="option" class="btn btn-success btn-sm btn-submit">
+              <i class="fa fa-save"></i> Trạng thái đơn hàng
+            </button>
             <button type="button" class="btn btn-default btn-sm" (click)="Reset()">
               <i class="fa fa-bell"></i> Làm mới
             </button>
-            <button type="submit" class="btn btn-success btn-sm btn-submit">
-              <i class="fa fa-save"></i> Đồng ý
-            </button>
+            
             <button type="button" class="btn btn-default btn-sm" (click)="closeModal()">
               <i class="fa fa-times"></i> Đóng lại
             </button>
@@ -139,5 +148,44 @@
         </form>  
         </div>
       </div>
+      <style>
+ 
+.nut_dropdown {
+  background-color: #0080ff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  height: 60px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.noidung_dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.noidung_dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.noidung_dropdown a:hover {background-color: #ddd;}
+.dropdown:hover .noidung_dropdown {display: block;}
+.dropdown:hover .nut_dropdown {background-color: #00bfff;}
+
+.hienThi {display:block;}
+      </style>
      
   
